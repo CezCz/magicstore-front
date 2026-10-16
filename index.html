@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linen Collection Store</title>
+  <style>
+    :root {
+      --primary: #2b4c3f;
+      --primary-hover: #1f372d;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --badge-bg: #e6f4ea;
+      --badge-color: #137333;
+      --border: #e9ecef;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .sku {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--badge-bg);
+      color: var(--badge-color);
+      text-transform: capitalize;
+    }
+
+    .product-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .product-price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Summer Linen Store</h1>
+      <p>Simple, breathable, and timeless essentials</p>
+    </header>
+
+    <main class="product-grid">
+      <!-- Product 1 -->
+      <article class="product-card">
+        <div>
+          <div class="product-header">
+            <span class="sku">SKU-123</span>
+            <span class="badge">In Stock</span>
+          </div>
+          <h2 class="product-title">Classic Linen Shirt</h2>
+          <div class="product-price">19.99 USD</div>
+        </div>
+        <a  class="btn"  rel="noopener noreferrer">View Product</a>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card">
+        <div>
+          <div class="product-header">
+            <span class="sku">SKU-456</span>
+            <span class="badge">In Stock</span>
+          </div>
+          <h2 class="product-title">Linen Trousers</h2>
+          <div class="product-price">49.00 USD</div>
+        </div>
+        <a  class="btn"  rel="noopener noreferrer">View Product</a>
+      </article>
+    </main>
+  </div>
+
+</body>
+</html>
